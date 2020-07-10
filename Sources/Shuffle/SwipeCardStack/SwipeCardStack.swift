@@ -62,6 +62,10 @@ open class SwipeCardStack: UIView, SwipeCardDelegate, UIGestureRecognizerDelegat
         return visibleCards.first
     }
 
+    public var canSwipe: Bool {
+        visibleCards.count > 1
+    }
+
     var backgroundCards: [SwipeCard] {
         return Array(visibleCards.dropFirst())
     }
